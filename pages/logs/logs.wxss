@@ -1,0 +1,69 @@
+page {
+  height: 100%;
+}
+.top{
+  width: 100%;
+ overflow: hidden;
+  float: left;
+  border: 1px solid rgba(238, 238, 238, 0.459); 
+  border-radius:15rpx;
+  box-sizing: border-box; 
+}
+.inp_val{
+  float: left;
+  width: 80%;
+  height: 60rpx;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color: #2b2727;
+  background: white;
+}
+.inp_val_but{
+  width: 14%;
+  height: 60rpx;
+  font-size: 26rpx;
+  padding: 0;
+}
+.button-hover{
+  background: white;
+}
+button:after{
+  border: none;
+}
+.wrapCity {
+  height: 100%;
+}
+
+.wrapCity swiper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapCity swiper scroll-view {
+  height: 100%;
+}
+
+.wrapCity swiper scroll-view .cityList view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 1.067rem;
+  height: 2.667rem;
+  line-height: 2.667rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.wrapCity swiper scroll-view .cityList .letterList {
+  background: #f0eff5;
+  margin-left: -.267rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+}

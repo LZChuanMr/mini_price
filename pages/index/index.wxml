@@ -1,0 +1,53 @@
+<!--index.wxml-->
+  <view class="inp_place">
+    <view>线路名称：</view>
+    <input placeholder="请输入线路名称" value="{{xl_place}}"></input>
+  </view>
+  <view class="inp_place">
+    <view>出发日期：</view>
+    <picker  mode="date" value="{{cf_date}}" start="2019-01-01" end="2030-09-01" bindchange="bindDateChange">
+        <input placeholder="请添加出发日期" value="{{cf_date}}"></input>
+    </picker>
+  </view>
+  <view class="inp_place">
+    <view>出行人数：</view>
+    <input placeholder="请输入出行人数" bindinput="getRs"  value="{{cx_num}}" style="padding-left: 12rpx;box-sizing: border-box;"></input>
+     <view class="dw">人</view>
+  </view>
+  <view class="inp_place" >
+    <view>机票段：</view>
+    <input placeholder="请添加机票段"  bindtap="goSelect" style="padding-left: 12rpx;box-sizing: border-box;"></input>
+  </view>
+  <view class='options' >
+    <text class='item' wx:for='{{history}}' wx:key="*this" data-index='{{index}}' bindtap='delInput'>{{item.productName}}</text>
+  </view>
+  
+  <view class="inp_place">
+    <view>签证：</view>
+    <input placeholder="请添加签证国家"  bindtap="goLogs"  style="padding-left: 12rpx;box-sizing: border-box;"></input>
+  </view>
+  <view class='options'>
+    <text class='item' wx:for='{{history1}}' wx:key="*this" data-index='{{index}}' bindtap='delInput1'>{{item}}</text>
+  </view>
+  <view class="place_dj">
+    <view class="dj_lit">地接：</view>
+    <input placeholder="请添加地接城市"  bindtap="goGnLogs"  style="padding-left: 12rpx;box-sizing: border-box;"></input>
+  </view>
+   <view class='options' wx:for='{{history2}}' wx:key="*this" data-index='{{index}}'>
+    <text class='item' bindtap='delInput2'  data-index='{{index}}'>{{item.country}}-{{item.city}}</text>
+    <view class="tw">
+        <input bindinput="getT"></input> <span>天</span>  
+        <input bindinput="getW"></input> <span>晚</span>  
+    </view>
+  </view>
+<view class='inp_place'>
+    <view>毛利率:</view>
+    <input value="{{ml}}" bindinput="getMl" style="text-align:center"></input>
+    <view class="dw">%</view>
+</view>  
+
+
+<van-dialog id="van-dialog"/>
+<view class='ck' bindtap="showPrice">参考价</view>
+
+

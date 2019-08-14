@@ -1,0 +1,134 @@
+/* pages/select/select.wxss */
+.template-date-view {
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 1001;
+  background-color: white;
+  margin: -100px 50rpx 0 25rpx;
+  border-radius: 3px;
+}
+
+.template-dv-header {
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-top: 25rpx;
+  color: #4a586a;
+}
+.template-date-center {
+  width: 100%;
+  height: 30rpx;
+}
+
+.template-center {
+  width: 10%;
+  height: 40rpx;
+  display: flex;
+  line-height: 150rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.template-bottom-buttom {
+  position: absolute;
+  bottom: 10rpx;
+  height: 80rpx;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 27rpx;
+  align-items: center;
+}
+
+
+.template-bottom-today {
+  text-align: center;
+  margin-right: 50rpx;
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  height: 100%;
+  line-height: 80rpx;
+  color: #4d4d4d;
+}
+
+.template-bottom-ok {
+  text-align: center;
+  height: 100%;
+  line-height: 80rpx;
+  color: #4d4d4d;
+}
+.start-date{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #4a586a;
+  font-size: 34rpx;
+  border: 1rpx solid #4a586a;
+  margin:20rpx 0 10rpx 0;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  border-radius:15rpx; 
+}
+
+/* 目的地选择 */
+
+.chooseCity {
+  box-sizing: border-box;
+  padding-top: 0.96rem;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.chooseCity:before {
+  content: '';
+  width: 200%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #a5a5a5;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+}
+
+
+.chooseCity .citySelect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 2.667rem;
+  line-height: 2.667rem;
+  font-size: 32rpx;
+  position: relative;
+}
+
+
+.chooseCity .citySelect .startCity {
+  width: 6.187rem;
+  color: #4a586a;
+}
+
+.chooseCity .citySelect .endCity {
+  width: 6.187rem;
+  text-align: right;
+  color: #4a586a;
+}
+
+.city-top{
+  position: relative;
+  top: 30rpx;
+
+}

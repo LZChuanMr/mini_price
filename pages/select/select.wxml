@@ -1,0 +1,44 @@
+<!--pages/select/select.wxml-->
+ <view wx:if="true" class='template-date-view'>
+    <view class='template-dv-header'>请选择您的出发和返回日期</view>
+    <input class="start-date" value="出发日期:{{start}}" placeholder="点我选择日期" bindtap="openCalendar"></input>
+    <input class="start-date" value="返回日期:{{stop}}" placeholder="点我选择日期" bindtap="openCalendar"></input>
+    <my-calendar 
+      wx:if="{{calendarShow}}"
+      title="请选择您的出发和返回日期"
+      useType="range"
+      start="{{start}}"
+      stop="{{stop}}"
+      bind:confirm="select"
+      bind:cancel="offCalendar"
+      />
+   
+
+    <!--城市选择-->
+    <view class="chooseCity pd-70">
+    <view class='template-dv-header'>请选择您的出发地和目的地</view>
+  		<view class="citySelect">
+  			<view class="startCity" bindtap="goGnLogs" data-type="1">{{startCity}}</view>
+        <view class='template-center'>
+            <image class='template-date-center city-top' src='../../static/img/beginToEnd.png'></image>
+        </view>
+  			<view class="endCity" bindtap="goGwLogs" data-type="2">{{endCity}}</view>
+  		</view>
+    </view>
+
+    <view class="picker template-dv-header" bindtap="getCp" data-index="{{index}}"> 请选择您的产品</view>
+    <!-- 请选择一种产品 -->
+    <picker bindchange="bindPickerChange"  range="{{array}}" range-key="{{'productName'}}"  data-index="{{index}}">
+        <view class='template-dv-header' data-index="{{index}}">
+            {{array[index].productName}}
+        </view>
+    </picker>
+
+     <view class='template-picker-bottom'>
+      <view class='template-bottom-buttom'>
+        <view class='template-bottom-today' bindtap='dateFormReset'>取消</view>
+        <view class='template-bottom-ok' bindtap='dateFormSubmit'>确定</view>
+      </view>
+    </view> 
+
+  </view>
